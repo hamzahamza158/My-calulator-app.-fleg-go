@@ -1,0 +1,10 @@
+[project]
+name = "calculator"
+version = "0.1.0"
+description = "Flet Calculator App"
+dependencies = [
+    "flet",
+]
+
+[tool.flet]
+app-path = "."
