@@ -29,9 +29,8 @@ jobs:
       with:
         channel: 'stable'
 
-    - name: Disable Flutter Analytics
-      run: flutter config --no-analytics
-
-    - name: Build Android APK (Non-Interactive)
+    - name: Build Android APK
+      env:
+        FLUTTER_ROOT: ${{ env.FLUTTER_HOME }}
       run: |
-        flet build apk --no-interactive --verbose
+        flet build apk
